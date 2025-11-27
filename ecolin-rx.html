@@ -8,7 +8,7 @@
     body { font-family: Arial, sans-serif; background: #f5fdf6; margin:0; color: #244125;}
     header { background: #059669; color: #fff; text-align: center; padding: 26px 0 16px 0;}
     .logo { max-width:130px; margin:0 auto 20px auto; display:block;}
-    nav {
+   nav {
   background: #10b981;
   text-align: center;
   padding: 12px 0;
@@ -43,9 +43,8 @@
   color: #244125;
 }
 
-.dropdown-parent {
-  position: relative;
-}
+/* First-level dropdown under Products */
+.dropdown-parent { position: relative; }
 
 .dropdown-menu {
   display: none;
@@ -54,7 +53,7 @@
   transform: translateX(-50%);
   top: 100%;
   background: #fffbe7;
-  min-width: 220px;
+  min-width: 260px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   border-radius: 8px;
   z-index: 1000;
@@ -63,9 +62,14 @@
   margin: 0;
 }
 
-.dropdown-menu li a {
+.dropdown-parent:hover .dropdown-menu,
+.dropdown-parent:focus-within .dropdown-menu {
   display: block;
-  padding: 14px 20px;
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 12px 16px;
   color: #059669;
   text-decoration: none;
   font-size: 16px;
@@ -73,14 +77,54 @@
   transition: background 0.2s, color 0.2s;
 }
 
-.dropdown-menu li:last-child a {
-  border-bottom: none;
-}
+.dropdown-menu > li:last-child > a { border-bottom: none; }
 
-.dropdown-menu li a:hover {
+.dropdown-menu > li > a:hover {
   background: #e6ffe3;
   color: #10b981;
 }
+
+/* Second-level submenu (Rubber / Plastic sub-items) */
+.submenu-parent {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 2px;
+  background: #fdfdf5;
+  min-width: 260px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+.submenu-parent:hover .submenu,
+.submenu-parent:focus-within .submenu {
+  display: block;
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px 16px;
+  color: #059669;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 1px solid #eee1b5;
+  transition: background 0.2s, color 0.2s;
+}
+
+.submenu li:last-child a { border-bottom: none; }
+
+.submenu li a:hover {
+  background: #e6ffe3;
+  color: #10b981;
+}
+
 
 /* This is the key: Show dropdown on hover of parent li */
 .dropdown-parent:hover .dropdown-menu,
@@ -104,21 +148,33 @@
     <h1>Ecolin RX</h1>
     <p>Bio-Based Antioxidant for Rubber</p>
   </header>
-  <nav>
+ <nav>
   <ul class="nav-list">
     <li><a href="index.html">Home</a></li>
     <li><a href="#mission">Mission</a></li>
+
     <li class="dropdown-parent">
       <a href="#products">Products ▼</a>
       <ul class="dropdown-menu">
-        <li><a href="ecolin-af.html">Ecolin AF</a></li>
-        <li><a href="ecolin-rx.html">Ecolin RX</a></li>
-        <li><a href="ecolin-rz80.html">Ecolin RZ80</a></li>
-        <li><a href="ecolin-pbat80.html">Ecolin PBAT80</a></li>
-        <li><a href="ecolin-pp35.html">Ecolin PP35</a></li>
-        <li><a href="ecolin-pvc30.html">Ecolin PVC30</a></li>
+        <li class="submenu-parent">
+          <a href="#">Rubber Raw Material ▶</a>
+          <ul class="submenu">
+            <li><a href="ecolin-af.html">Ecolin AF – Functional Filler</a></li>
+            <li><a href="ecolin-rx.html">Ecolin RX – Antioxidant</a></li>
+            <li><a href="ecolin-rz80.html">Ecolin RZ80 – Antiozonant MB</a></li>
+          </ul>
+        </li>
+        <li class="submenu-parent">
+          <a href="#">Plastic Raw Material ▶</a>
+          <ul class="submenu">
+            <li><a href="ecolin-pbat80.html">Ecolin PBAT80 – Biodegradable Polymer</a></li>
+            <li><a href="ecolin-pp35.html">Ecolin PP35 – Impact Modifier</a></li>
+            <li><a href="ecolin-pvc30.html">Ecolin PVC30 – Bio-Stabilizer</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
+
     <li><a href="#news">News</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -159,5 +215,6 @@
   </footer>
 </body>
 </html>
+
 
 
