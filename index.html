@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lignochem Composites Pvt. Ltd. | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background: #f5fdf6; color: #244125;}
+    header {
+      background: #059669;
+      color: #fff;
+      text-align: center;
+      padding: 36px 0 24px 0;
+    }
+    .logo { max-width:170px; margin:0 auto 18px auto; display:block;}
+   nav {
+  background: #10b981;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: bold;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(6, 95, 70, 0.07);
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: inline-block;
+}
+
+.nav-list > li {
+  display: inline-block;
+  position: relative;
+  margin: 0 22px;
+}
+
+.nav-list > li > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  padding: 5px 0;
+  display: inline-block;
+}
+
+.nav-list > li > a:hover,
+.nav-list > li:hover > a {
+  color: #244125;
+}
+
+.dropdown-parent {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  background: #fffbe7;
+  min-width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 14px 20px;
+  color: #059669;
+  text-decoration: none;
+  font-size: 16px;
+  border-bottom: 1px solid #f0e6bc;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu li:last-child a {
+  border-bottom: none;
+}
+
+.dropdown-menu li a:hover {
+  background: #e6ffe3;
+  color: #10b981;
+}
+
+/* This is the key: Show dropdown on hover of parent li */
+.dropdown-parent:hover .dropdown-menu,
+.dropdown-parent:focus-within .dropdown-menu {
+  display: block;
+}
+    .nav-list > li:hover .dropdown { display:block;}
+    .hero {
+      background: linear-gradient(to right, #e6ffe3 0%, #b7e7b2 100%);
+      padding: 56px 0 42px 0;
+      text-align: center;
+    }
+    .hero h1 { font-size: 2.9em; margin: 0 0 18px 0; color:#059669;}
+    .hero p { font-size: 1.5em; margin-bottom: 0; }
+    .mission {max-width:850px; margin:40px auto; background:#fffbe7; padding:28px; border-radius:12px;}
+    .section { max-width:900px; margin:44px auto; background: #eef8ef; padding:28px; border-radius:12px;}
+    .section h2 {color:#059669;}
+    .news-gallery {display:flex; gap:38px; flex-wrap:wrap;}
+    .news, .gallery {flex:1;}
+    .news ul { padding-left: 16px;}
+    .gallery img {height:96px; margin:7px 12px; border-radius:7px;}
+    footer {
+      background:#059669;
+      color:#fff; font-size:1.2em;
+      text-align:center; padding:26px 0;
+      margin-top:36px;
+    }
+    .cta-btn {
+      background:#10b981;
+      color:#fff;
+      border:none; border-radius:5px;
+      padding:14px 28px; font-size:1.1em;
+      cursor:pointer; margin-top:14px;
+      font-weight:bold;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background:#059669;}
+    @media (max-width:750px) {
+      .news-gallery {flex-direction:column;}
+      .gallery img {height:70px;}
+      .nav-list > li {margin:0 8px;}
+      .dropdown {min-width:120px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="LCC-Logo.jpeg" alt="Lignochem Logo" class="logo">
+    <div style="font-size:1.3em;">
+      LIGNOCHEM COMPOSITES<br>Bio-Derived Innovations for Rubber & Plastics
+    </div>
+  </header>
+  <nav>
+  <ul class="nav-list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#mission">Mission</a></li>
+    <li class="dropdown-parent">
+      <a href="#products">Products ▼</a>
+      <ul class="dropdown-menu">
+        <li><a href="ecolin-af.html">Ecolin AF</a></li>
+        <li><a href="ecolin-rx.html">Ecolin RX</a></li>
+        <li><a href="ecolin-rz80.html">Ecolin RZ80</a></li>
+        <li><a href="ecolin-pbat80.html">Ecolin PBAT80</a></li>
+        <li><a href="ecolin-pp35.html">Ecolin PP35</a></li>
+        <li><a href="ecolin-pvc30.html">Ecolin PVC30</a></li>
+      </ul>
+    </li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+  <div class="hero">
+    <h1>Turning Lignin Into Sustainable Value</h1>
+    <p>We create the next generation of eco-friendly solutions for industry.<br>
+    <span style="color:#10b981; font-weight:bold;">No greenwashing. Only real impact.</span>
+    </p>
+  </div>
+
+  <section class="mission" id="mission">
+    <h2>Our Mission</h2>
+    <p>
+      At Lignochem Composites, we reimagine materials for a future that works for the planet and for people.
+      Our team blends science, sustainability, and business to offer bio-based solutions for the rubber and plastic industries.
+      Every product in our portfolio—from antioxidants to biodegradable polymers—helps reduce environmental impact and empowers ethical manufacturing.
+      We're transparent, future-ready, and dedicated to circular innovation from Ahmedabad, India.
+    </p>
+  </section>
+
+  <section class="section news-gallery" id="news">
+    <div class="news">
+      <h2>News</h2>
+      <ul>
+        <li>Launched Ecolin PBAT80 biodegradable polymer in global markets.</li>
+        <li>Featured keynote at 2025 Green Materials Summit.</li>
+        <li>Recognized with the Eco Innovation Award 2025.</li>
+      </ul>
+    </div>
+    <div class="gallery">
+      <h2>Gallery</h2>
+      <img src="Pilot.png" alt="Event 1">
+      <img src="Journey.png" alt="Workshop">
+      <img src="IRMRI Membership Certificate.jpg" alt="Award">
+      <img src="Team.png" alt="Event 2">
+    </div>
+  </section>
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>
+    <strong>LIGNO CHEM COMPOSITES PRIVATE LIMITED</strong><br>
+    B-202, Celebration City Center,<br>
+    Daskroi, Bopal,<br>
+    Ahmedabad-380057, Gujarat, India<br><br>
+    <strong>GST Number:</strong> 24AAFCL1773R1ZZ<br>
+    <strong>CIN Number:</strong> U24110GJ2022PTC135647
+  </p>
+</section>
+  
+  <footer>
+    &copy; 2025 Lignochem Composites Pvt. Ltd. | Ahmedabad, Gujarat
+  </footer>
+</body>
+</html>
+
+
