@@ -173,45 +173,51 @@
       .nav-list > li {margin:0 8px;}
       .dropdown {min-width:120px;}
     }
-   header {
+  header {
   background: #059669;
   color: #fff;
-  padding: 16px 24px;
+  padding: 8px 24px;
   display: flex;
-  align-items: center;
-  justify-content: center; /* center content overall */
-  position: relative;
+  align-items: center;        /* vertically centers logo and text */
 }
 
 .logo-link {
-  position: absolute;
-  left: 24px;            /* logo fixed to left */
-  top: 50%;
-  transform: translateY(-50%);
+  display: inline-block;
+  margin-right: 16px;         /* space between logo and text */
 }
 
 .logo {
-  max-width: 130px;
+  height: 48px;               /* keep logo height consistent */
+  width: auto;
   display: block;
 }
 
 .header-text {
-  text-align: center;     /* center the text */
-  font-size: 1.2em;
+  flex: 1;                    /* take remaining space */
+  text-align: center;         /* center text in header */
 }
 
+.company-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
 
+.tagline {
+  font-size: 0.95em;
+}
   </style>
 </head>
 <body>
 <header>
   <a href="index.html" class="logo-link">
-    <img src="LCC-Logo.jpeg" alt="Lignochem Logo" class="logo">
+    <img src="LCC-Logo.jpg" alt="Lignochem Logo" class="logo">
   </a>
   <div class="header-text">
-    LIGNOCHEM COMPOSITES<br>Bio-Derived Innovations for Rubber & Plastics
+    <div class="company-name">LIGNOCHEM COMPOSITES</div>
+    <div class="tagline">Bio-Derived Innovations for Rubber &amp; Plastics</div>
   </div>
 </header>
+
 <nav>
   <ul class="nav-list">
     <li><a href="index.html">Home</a></li>
@@ -296,6 +302,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
