@@ -173,28 +173,35 @@
       .nav-list > li {margin:0 8px;}
       .dropdown {min-width:120px;}
     }
-  header {
+header {
   background: #059669;
   color: #fff;
   padding: 8px 24px;
-  display: flex;
-  align-items: center;        
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* left - center - right */
+  align-items: center;                  /* vertical align logo & text */
+}
+
+.header-left {
+  justify-self: start;
+}
+
+.header-center {
+  text-align: center;                   /* center text in middle cell */
+}
+
+.header-right {
+  justify-self: end;                    /* empty but balances layout */
 }
 
 .logo-link {
   display: inline-block;
-  margin-right: 16px;         
 }
 
 .logo {
-  height: 48px;               
+  height: 48px;
   width: auto;
   display: block;
-}
-
-.header-text {
-  flex: 1;                    
-  text-align: center;         
 }
 
 .company-name {
@@ -209,14 +216,18 @@
 </head>
 <body>
 <header>
-  <a href="index.html" class="logo-link">
-    <img src="LCC-Logo.jpeg" alt="Lignochem Logo" class="logo">
-  </a>
-  <div class="header-text">
+  <div class="header-left">
+    <a href="index.html" class="logo-link">
+      <img src="LCC-Logo.jpg" alt="Lignochem Logo" class="logo">
+    </a>
+  </div>
+  <div class="header-center">
     <div class="company-name">LIGNOCHEM COMPOSITES</div>
     <div class="tagline">Bio-Derived Innovations for Rubber &amp; Plastics</div>
   </div>
+  <div class="header-right"></div>
 </header>
+
 
 <nav>
   <ul class="nav-list">
@@ -302,6 +313,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
