@@ -173,28 +173,33 @@
       .nav-list > li {margin:0 8px;}
       .dropdown {min-width:120px;}
     }
-    header {
+   header {
   background: #059669;
   color: #fff;
   padding: 16px 24px;
   display: flex;
   align-items: center;
+  justify-content: center; /* center content overall */
+  position: relative;
 }
 
 .logo-link {
-  display: inline-block;
+  position: absolute;
+  left: 24px;            /* logo fixed to left */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .logo {
   max-width: 130px;
-  margin: 0;
   display: block;
 }
 
 .header-text {
-  margin-left: 16px;
+  text-align: center;     /* center the text */
   font-size: 1.2em;
 }
+
 
   </style>
 </head>
@@ -207,7 +212,6 @@
     LIGNOCHEM COMPOSITES<br>Bio-Derived Innovations for Rubber & Plastics
   </div>
 </header>
-  
 <nav>
   <ul class="nav-list">
     <li><a href="index.html">Home</a></li>
@@ -292,6 +296,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
